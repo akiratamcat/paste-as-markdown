@@ -1,7 +1,20 @@
 import path from 'path';
 import { defineConfig } from 'vitest/config';
 
+/** Matches PO translation files, e.g. `locales/ja.po`, optionally followed by a Vite query string. */
+const PO_FILE_PATTERN = /\.po(?:\?.*)?$/;
+
 export default defineConfig({
+    plugins: [
+        {
+            // Mirrors the esbuild `loader: { ".po": "text" }` in plugin.config.json: PO files import as their raw text.
+            name: 'po-as-text',
+            transform(code, id) {
+                if (!PO_FILE_PATTERN.test(id)) return null;
+                return { code: `export default ${JSON.stringify(code)};`, map: null };
+            },
+        },
+    ],
     resolve: {
         alias: [
             { find: /^api$/, replacement: path.resolve(import.meta.dirname, 'src/__tests__/__mocks__/api.ts') },

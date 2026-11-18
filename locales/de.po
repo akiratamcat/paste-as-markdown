@@ -1,0 +1,105 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "HTML als Markdown einfügen"
+
+msgid "Include images"
+msgstr "Bilder einbeziehen"
+
+msgid "Convert images to Joplin resources"
+msgstr "Bilder in Joplin-Ressourcen umwandeln"
+
+msgid "Normalize smart quotes"
+msgstr "Typografische Anführungszeichen normalisieren"
+
+msgid "Force tight lists"
+msgstr "Kompakte Listen erzwingen"
+
+msgid "List indentation"
+msgstr "Listeneinrückung"
+
+msgid "Spaces"
+msgstr "Leerzeichen"
+
+msgid "Tabs"
+msgstr "Tabulatoren"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "Wenn aktiviert, werden Bilder in das eingefügte Markdown übernommen. Wenn deaktiviert, werden Bilder vollständig entfernt."
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "Wenn aktiviert, werden http(s)- und Base64-Bilder als Joplin-Ressourcen gespeichert (erfordert „Bilder einbeziehen“)."
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Wandelt typografische Anführungszeichen aus Word/Office in gerade Anführungszeichen um, für bessere Markdown-Kompatibilität."
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "Verhindert Leerzeilen zwischen Listeneinträgen im ausgegebenen Markdown, außer bei Listeneinträgen mit mehreren Blöcken."
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "Legt fest, ob verschachtelte Listeneinträge und Fortsetzungszeilen mit Leerzeichen oder Tabulatoren eingerückt werden."
+
+msgid "Show paste options dialog"
+msgstr "Dialog mit Einfügeoptionen anzeigen"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "Wenn aktiviert, zeigt „HTML als Markdown einfügen“ zuerst einen Dialog, in dem die obigen Optionen nur für diesen Einfügevorgang angepasst werden können. Der Dialog übernimmt diese Einstellungen als Ausgangswerte."
+
+msgid "Paste options"
+msgstr "Einfügeoptionen"
+
+msgid "Paste"
+msgstr "Einfügen"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "„HTML als Markdown einfügen“ wird im Rich-Text-Editor nicht unterstützt"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "„HTML als Markdown einfügen“ fehlgeschlagen: %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "Konvertierung fehlgeschlagen; als reiner Text eingefügt"
+
+msgid "Clipboard is empty"
+msgstr "Die Zwischenablage ist leer"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "Als reiner Text eingefügt (kein HTML gefunden)"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Als Markdown eingefügt (ohne Bilder)"
+
+msgid "Pasted as Markdown"
+msgstr "Als Markdown eingefügt"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Als Markdown eingefügt (%s von %s Bild umgewandelt)"
+msgstr[1] "Als Markdown eingefügt (%s von %s Bildern umgewandelt)"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Als Markdown eingefügt (%s Bildressource erstellt)"
+msgstr[1] "Als Markdown eingefügt (%s Bildressourcen erstellt)"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "Einfügen fehlgeschlagen: HTML konnte nicht verarbeitet und reiner Text nicht gelesen werden"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "Einfügen fehlgeschlagen: kein HTML oder reiner Text verfügbar"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "Einfügen fehlgeschlagen: Inhalt konnte nicht in den Editor eingefügt werden"

@@ -1,5 +1,6 @@
 import joplin from 'api';
 import { SettingItemType } from 'api/types';
+import { _ } from './i18n';
 import logger from './logger';
 import { LIST_INDENTATION, type ListIndentation, type PasteOptions } from './types';
 
@@ -24,19 +25,27 @@ export const DEFAULT_PASTE_OPTIONS = {
 
 const DEFAULT_SHOW_PASTE_OPTIONS_DIALOG = false;
 
-/** Labels shared by the settings screen and the per-paste options dialog. */
-export const PASTE_OPTION_LABELS = {
-    includeImages: 'Include images',
-    convertImagesToResources: 'Convert images to Joplin resources',
-    normalizeQuotes: 'Normalize smart quotes',
-    forceTightLists: 'Force tight lists',
-    listIndentation: 'List indentation',
-} as const satisfies Record<keyof PasteOptions, string>;
+/**
+ * Labels shared by the settings screen and the per-paste options dialog.
+ * A function rather than a constant so each call returns text in the active UI language.
+ */
+export function getPasteOptionLabels(): Record<keyof PasteOptions, string> {
+    return {
+        includeImages: _('Include images'),
+        convertImagesToResources: _('Convert images to Joplin resources'),
+        normalizeQuotes: _('Normalize smart quotes'),
+        forceTightLists: _('Force tight lists'),
+        listIndentation: _('List indentation'),
+    };
+}
 
-export const LIST_INDENTATION_LABELS = {
-    [LIST_INDENTATION.SPACES]: 'Spaces',
-    [LIST_INDENTATION.TABS]: 'Tabs',
-} as const satisfies Record<ListIndentation, string>;
+/** Labels for the list indentation choices, in the active UI language. */
+export function getListIndentationLabels(): Record<ListIndentation, string> {
+    return {
+        [LIST_INDENTATION.SPACES]: _('Spaces'),
+        [LIST_INDENTATION.TABS]: _('Tabs'),
+    };
+}
 
 /** Everything the paste handler reads from settings on each paste. */
 export interface PasteSettings {
@@ -44,11 +53,12 @@ export interface PasteSettings {
     showPasteOptionsDialog: boolean;
 }
 
-const SETTINGS_SECTION = 'pasteAsMarkdown';
+const SETTINGS_SECTION = 'pasteAsMarkdownI18n';
 
 export async function registerPluginSettings(): Promise<void> {
+    const labels = getPasteOptionLabels();
     await joplin.settings.registerSection(SETTINGS_SECTION, {
-        label: 'Paste HTML as Markdown',
+        label: _('Paste HTML as Markdown'),
         iconName: 'fas fa-paste',
     });
 
@@ -58,54 +68,58 @@ export async function registerPluginSettings(): Promise<void> {
             type: SettingItemType.Bool,
             section: SETTINGS_SECTION,
             public: true,
-            label: PASTE_OPTION_LABELS.includeImages,
-            description:
-                'If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely.',
+            label: labels.includeImages,
+            description: _(
+                'If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely.'
+            ),
         },
         [SETTINGS.CONVERT_IMAGES_TO_RESOURCES]: {
             value: DEFAULT_PASTE_OPTIONS.convertImagesToResources,
             type: SettingItemType.Bool,
             section: SETTINGS_SECTION,
             public: true,
-            label: PASTE_OPTION_LABELS.convertImagesToResources,
-            description:
-                "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images').",
+            label: labels.convertImagesToResources,
+            description: _(
+                "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+            ),
         },
         [SETTINGS.NORMALIZE_QUOTES]: {
             value: DEFAULT_PASTE_OPTIONS.normalizeQuotes,
             type: SettingItemType.Bool,
             section: SETTINGS_SECTION,
             public: true,
-            label: PASTE_OPTION_LABELS.normalizeQuotes,
-            description: 'Convert Word/Office smart quotes to regular quotes for better markdown compatibility.',
+            label: labels.normalizeQuotes,
+            description: _('Convert Word/Office smart quotes to regular quotes for better markdown compatibility.'),
         },
         [SETTINGS.FORCE_TIGHT_LISTS]: {
             value: DEFAULT_PASTE_OPTIONS.forceTightLists,
             type: SettingItemType.Bool,
             section: SETTINGS_SECTION,
             public: true,
-            label: PASTE_OPTION_LABELS.forceTightLists,
-            description:
-                'Prevent blank lines between list items in output Markdown, except for list items with multi-block content.',
+            label: labels.forceTightLists,
+            description: _(
+                'Prevent blank lines between list items in output Markdown, except for list items with multi-block content.'
+            ),
         },
         [SETTINGS.LIST_INDENTATION]: {
             value: DEFAULT_PASTE_OPTIONS.listIndentation,
             type: SettingItemType.String,
             section: SETTINGS_SECTION,
             public: true,
-            label: PASTE_OPTION_LABELS.listIndentation,
-            description: 'Choose whether nested list items and continuation lines are indented with spaces or tabs.',
+            label: labels.listIndentation,
+            description: _('Choose whether nested list items and continuation lines are indented with spaces or tabs.'),
             isEnum: true,
-            options: LIST_INDENTATION_LABELS,
+            options: getListIndentationLabels(),
         },
         [SETTINGS.SHOW_PASTE_OPTIONS_DIALOG]: {
             value: DEFAULT_SHOW_PASTE_OPTIONS_DIALOG,
             type: SettingItemType.Bool,
             section: SETTINGS_SECTION,
             public: true,
-            label: 'Show paste options dialog',
-            description:
-                'If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings.',
+            label: _('Show paste options dialog'),
+            description: _(
+                'If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings.'
+            ),
         },
     });
 }

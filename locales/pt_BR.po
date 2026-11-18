@@ -1,0 +1,105 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "Colar HTML como Markdown"
+
+msgid "Include images"
+msgstr "Incluir imagens"
+
+msgid "Convert images to Joplin resources"
+msgstr "Converter imagens em recursos do Joplin"
+
+msgid "Normalize smart quotes"
+msgstr "Normalizar aspas inteligentes"
+
+msgid "Force tight lists"
+msgstr "Forçar listas compactas"
+
+msgid "List indentation"
+msgstr "Recuo de listas"
+
+msgid "Spaces"
+msgstr "Espaços"
+
+msgid "Tabs"
+msgstr "Tabulações"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "Se ativado, as imagens serão incluídas no Markdown colado. Se desativado, as imagens serão removidas completamente."
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "Se ativado, imagens http(s) e base64 são armazenadas como recursos do Joplin (requer \"Incluir imagens\")."
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Converte as aspas inteligentes do Word/Office em aspas retas para melhor compatibilidade com Markdown."
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "Evita linhas em branco entre itens de lista no Markdown gerado, exceto em itens de lista com conteúdo de vários blocos."
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "Escolha se itens de lista aninhados e linhas de continuação são recuados com espaços ou tabulações."
+
+msgid "Show paste options dialog"
+msgstr "Mostrar diálogo de opções de colagem"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "Se ativado, \"Colar HTML como Markdown\" mostra primeiro um diálogo para ajustar as opções acima somente para essa colagem. O diálogo começa com estas configurações."
+
+msgid "Paste options"
+msgstr "Opções de colagem"
+
+msgid "Paste"
+msgstr "Colar"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "\"Colar HTML como Markdown\" não é compatível com o editor de texto rico"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "Falha em \"Colar HTML como Markdown\": %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "Falha na conversão; texto simples colado"
+
+msgid "Clipboard is empty"
+msgstr "A área de transferência está vazia"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "Texto simples colado (nenhum HTML encontrado)"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Colado como Markdown (imagens excluídas)"
+
+msgid "Pasted as Markdown"
+msgstr "Colado como Markdown"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Colado como Markdown (%s de %s imagem convertida)"
+msgstr[1] "Colado como Markdown (%s de %s imagens convertidas)"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Colado como Markdown (%s recurso de imagem criado)"
+msgstr[1] "Colado como Markdown (%s recursos de imagem criados)"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "Falha ao colar: não foi possível processar o HTML nem ler o texto simples"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "Falha ao colar: nenhum HTML ou texto simples disponível"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "Falha ao colar: não foi possível inserir o conteúdo no editor"

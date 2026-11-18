@@ -4,6 +4,7 @@ import { insertMarkdownAtCursor } from './editor/editorIntegration';
 import { getErrorMessage } from './errors';
 import { DEFAULT_PASS_CONTEXT } from './html/passContext';
 import { HtmlProcessingError } from './html/processHtml';
+import { _, _n } from './i18n';
 import logger from './logger';
 import { convertHtmlToMarkdown } from './pasteConversion';
 import { loadPasteSettings } from './settings';
@@ -69,7 +70,7 @@ async function attemptPlainTextFallback(text: string, errorMessage: string): Pro
             return null;
         }
         await insertMarkdownAtCursor(text);
-        await showToast('Conversion failed; pasted plain text', ToastType.Error);
+        await showToast(_('Conversion failed; pasted plain text'), ToastType.Error);
         return {
             markdown: text,
             success: false,
@@ -110,31 +111,40 @@ async function fallbackOrFailure(
 async function pastePlainTextOnly(): Promise<ConversionSuccess | ConversionFailure> {
     const text = await readClipboardText();
     if (!text) {
-        await showToast('Clipboard is empty', ToastType.Info);
+        await showToast(_('Clipboard is empty'), ToastType.Info);
         return { markdown: '', success: false, plainTextFallback: false, warnings: ['Clipboard empty'] };
     }
     await insertMarkdownAtCursor(text);
-    await showToast('Pasted plain text (no HTML found)', ToastType.Info);
+    await showToast(_('Pasted plain text (no HTML found)'), ToastType.Info);
     return { markdown: text, success: true, plainTextFallback: true };
 }
-
-const pluralSuffix = (count: number): string => (count === 1 ? '' : 's');
 
 /** Builds the success toast text, including image resource counts when relevant. */
 function buildSuccessMessage(options: PasteOptions, resources: ResourceConversionMeta): string {
     if (!options.includeImages) {
-        return 'Pasted as Markdown (images excluded)';
+        return _('Pasted as Markdown (images excluded)');
     }
-    const base = 'Pasted as Markdown';
+    const base = _('Pasted as Markdown');
     if (!options.convertImagesToResources) {
         return base;
     }
     const { resourcesCreated: created, attempted, failed } = resources;
     if (failed > 0 && attempted > 0) {
-        return `${base} (converted ${created} of ${attempted} image${pluralSuffix(attempted)})`;
+        return _n(
+            'Pasted as Markdown (converted %s of %s image)',
+            'Pasted as Markdown (converted %s of %s images)',
+            attempted,
+            created,
+            attempted
+        );
     }
     if (created > 0 && attempted > 0) {
-        return `${base} (${created} image resource${pluralSuffix(created)} created)`;
+        return _n(
+            'Pasted as Markdown (%s image resource created)',
+            'Pasted as Markdown (%s image resources created)',
+            created,
+            created
+        );
     }
     return base;
 }
@@ -147,7 +157,7 @@ async function handleConversionFailure(err: unknown, fallbackText: string): Prom
         return fallbackOrFailure(
             fallbackText,
             err.message,
-            'Paste failed: unable to process HTML or read plain text',
+            _('Paste failed: unable to process HTML or read plain text'),
             'Plain text fallback failed'
         );
     }
@@ -157,7 +167,7 @@ async function handleConversionFailure(err: unknown, fallbackText: string): Prom
     return fallbackOrFailure(
         fallbackText,
         errorMessage,
-        'Paste failed: no HTML or plain text available',
+        _('Paste failed: no HTML or plain text available'),
         'No plain text available'
     );
 }
@@ -210,7 +220,7 @@ export async function handlePasteAsMarkdown(promptForOptions: PasteOptionsPrompt
             return fallbackOrFailure(
                 fallbackText,
                 errorMessage,
-                'Paste failed: unable to insert content into editor',
+                _('Paste failed: unable to insert content into editor'),
                 'Plain text fallback also failed'
             );
         }

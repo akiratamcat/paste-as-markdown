@@ -1,0 +1,103 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "HTML을 Markdown으로 붙여넣기"
+
+msgid "Include images"
+msgstr "이미지 포함"
+
+msgid "Convert images to Joplin resources"
+msgstr "이미지를 Joplin 리소스로 변환"
+
+msgid "Normalize smart quotes"
+msgstr "스마트 따옴표 정규화"
+
+msgid "Force tight lists"
+msgstr "목록 간격 좁히기"
+
+msgid "List indentation"
+msgstr "목록 들여쓰기"
+
+msgid "Spaces"
+msgstr "공백"
+
+msgid "Tabs"
+msgstr "탭"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "활성화하면 붙여넣은 Markdown에 이미지가 포함됩니다. 비활성화하면 이미지가 모두 제거됩니다."
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "활성화하면 http(s) 및 base64 이미지가 Joplin 리소스로 저장됩니다('이미지 포함' 필요)."
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Markdown 호환성을 높이기 위해 Word/Office 스마트 따옴표를 일반 따옴표로 변환합니다."
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "출력 Markdown에서 목록 항목 사이에 빈 줄이 생기지 않도록 합니다. 단, 여러 블록으로 된 목록 항목은 제외됩니다."
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "중첩된 목록 항목과 연속 줄을 공백으로 들여쓸지 탭으로 들여쓸지 선택합니다."
+
+msgid "Show paste options dialog"
+msgstr "붙여넣기 옵션 대화 상자 표시"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "활성화하면 'HTML을 Markdown으로 붙여넣기'가 먼저 대화 상자를 표시하여 해당 붙여넣기에 대해서만 위 옵션을 조정할 수 있습니다. 대화 상자는 이 설정값으로 시작합니다."
+
+msgid "Paste options"
+msgstr "붙여넣기 옵션"
+
+msgid "Paste"
+msgstr "붙여넣기"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "서식 있는 텍스트 편집기에서는 'HTML을 Markdown으로 붙여넣기'를 지원하지 않습니다"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "HTML을 Markdown으로 붙여넣기 실패: %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "변환에 실패하여 일반 텍스트로 붙여넣었습니다"
+
+msgid "Clipboard is empty"
+msgstr "클립보드가 비어 있습니다"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "일반 텍스트로 붙여넣었습니다(HTML 없음)"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Markdown으로 붙여넣었습니다(이미지 제외)"
+
+msgid "Pasted as Markdown"
+msgstr "Markdown으로 붙여넣었습니다"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Markdown으로 붙여넣었습니다(이미지 %2$s개 중 %1$s개 변환)"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Markdown으로 붙여넣었습니다(이미지 리소스 %s개 생성)"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "붙여넣기 실패: HTML을 처리하거나 일반 텍스트를 읽을 수 없습니다"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "붙여넣기 실패: 사용 가능한 HTML 또는 일반 텍스트가 없습니다"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "붙여넣기 실패: 편집기에 내용을 삽입할 수 없습니다"

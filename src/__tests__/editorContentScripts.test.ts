@@ -80,7 +80,7 @@ describe('editor content scripts', () => {
         expect(insertCommand?.call(editor, 'inserted')).toBe(true);
         expect(editor.replaceSelection).toHaveBeenCalledWith('inserted');
         expect(insertCommand?.call(editor, null)).toBe(false);
-        expect(module.codeMirrorOptions).toEqual({ 'pasteAsMarkdown-enableContentScript': true });
+        expect(module.codeMirrorOptions).toEqual({ 'pasteAsMarkdownI18n-enableContentScript': true });
     });
 
     test('the CodeMirror 5 script ignores the CodeMirror 6 wrapper', () => {

@@ -1,4 +1,5 @@
 {
     "extraScripts": ["editor/contentScripts/codeMirror6.ts", "editor/contentScripts/codeMirror5.ts"],
-    "buildOptions": { "target": "es2023" }
+    "buildOptions": { "target": "es2023" },
+    "mainBuildOptions": { "loader": { ".po": "text" } }
 }

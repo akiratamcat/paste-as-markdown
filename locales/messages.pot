@@ -1,0 +1,105 @@
+# Translation template for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Paste HTML as Markdown"
+msgstr ""
+
+msgid "Include images"
+msgstr ""
+
+msgid "Convert images to Joplin resources"
+msgstr ""
+
+msgid "Normalize smart quotes"
+msgstr ""
+
+msgid "Force tight lists"
+msgstr ""
+
+msgid "List indentation"
+msgstr ""
+
+msgid "Spaces"
+msgstr ""
+
+msgid "Tabs"
+msgstr ""
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr ""
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr ""
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr ""
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr ""
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr ""
+
+msgid "Show paste options dialog"
+msgstr ""
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr ""
+
+msgid "Paste options"
+msgstr ""
+
+msgid "Paste"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr ""
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr ""
+
+msgid "Conversion failed; pasted plain text"
+msgstr ""
+
+msgid "Clipboard is empty"
+msgstr ""
+
+msgid "Pasted plain text (no HTML found)"
+msgstr ""
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr ""
+
+msgid "Pasted as Markdown"
+msgstr ""
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr ""
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr ""
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr ""

@@ -1,0 +1,103 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "将 HTML 粘贴为 Markdown"
+
+msgid "Include images"
+msgstr "包含图片"
+
+msgid "Convert images to Joplin resources"
+msgstr "将图片转换为 Joplin 资源"
+
+msgid "Normalize smart quotes"
+msgstr "规范化智能引号"
+
+msgid "Force tight lists"
+msgstr "强制紧凑列表"
+
+msgid "List indentation"
+msgstr "列表缩进"
+
+msgid "Spaces"
+msgstr "空格"
+
+msgid "Tabs"
+msgstr "制表符"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "启用后，粘贴的 Markdown 中将包含图片。禁用后，图片将被完全移除。"
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "启用后，http(s) 和 base64 图片将存储为 Joplin 资源（需要启用“包含图片”）。"
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "将 Word/Office 智能引号转换为普通引号，以提高 Markdown 兼容性。"
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "防止输出的 Markdown 中列表项之间出现空行，包含多个块内容的列表项除外。"
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "选择嵌套列表项和续行使用空格还是制表符缩进。"
+
+msgid "Show paste options dialog"
+msgstr "显示粘贴选项对话框"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "启用后，“将 HTML 粘贴为 Markdown”会先显示一个对话框，仅针对本次粘贴调整上述选项。对话框的初始值取自这些设置。"
+
+msgid "Paste options"
+msgstr "粘贴选项"
+
+msgid "Paste"
+msgstr "粘贴"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "富文本编辑器不支持“将 HTML 粘贴为 Markdown”"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "将 HTML 粘贴为 Markdown 失败：%s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "转换失败；已粘贴纯文本"
+
+msgid "Clipboard is empty"
+msgstr "剪贴板为空"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "已粘贴纯文本（未找到 HTML）"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "已粘贴为 Markdown（已排除图片）"
+
+msgid "Pasted as Markdown"
+msgstr "已粘贴为 Markdown"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "已粘贴为 Markdown（已转换 %2$s 张图片中的 %1$s 张）"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "已粘贴为 Markdown（已创建 %s 个图片资源）"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "粘贴失败：无法处理 HTML 或读取纯文本"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "粘贴失败：没有可用的 HTML 或纯文本"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "粘贴失败：无法将内容插入编辑器"

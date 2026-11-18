@@ -33,6 +33,8 @@ export default defineConfig({
         'import/no-cycle': 'error',
         'import/no-self-import': 'error',
         'import/no-duplicates': ['error', { preferInline: true }],
+        // `_n` is the conventional gettext name for plural translations (see src/i18n/index.ts).
+        'no-underscore-dangle': ['error', { allow: ['_n'] }],
         ...regexpRecommendedRules,
         // The `i` flag applies to the whole pattern; keep explicit case ranges in allowlists.
         'regexp/use-ignore-case': 'off',

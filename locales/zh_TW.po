@@ -1,0 +1,103 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "將 HTML 貼上為 Markdown"
+
+msgid "Include images"
+msgstr "包含圖片"
+
+msgid "Convert images to Joplin resources"
+msgstr "將圖片轉換為 Joplin 資源"
+
+msgid "Normalize smart quotes"
+msgstr "標準化智慧引號"
+
+msgid "Force tight lists"
+msgstr "強制緊湊清單"
+
+msgid "List indentation"
+msgstr "清單縮排"
+
+msgid "Spaces"
+msgstr "空格"
+
+msgid "Tabs"
+msgstr "定位字元"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "啟用後，貼上的 Markdown 會包含圖片。停用後，圖片將被完全移除。"
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "啟用後，http(s) 與 base64 圖片會儲存為 Joplin 資源（需要啟用「包含圖片」）。"
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "將 Word/Office 智慧引號轉換為一般引號，以提升 Markdown 相容性。"
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "避免輸出的 Markdown 在清單項目之間出現空行，但包含多個區塊內容的清單項目除外。"
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "選擇巢狀清單項目與接續行要使用空格還是定位字元縮排。"
+
+msgid "Show paste options dialog"
+msgstr "顯示貼上選項對話方塊"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "啟用後，「將 HTML 貼上為 Markdown」會先顯示對話方塊，僅針對此次貼上調整上述選項。對話方塊的初始值取自這些設定。"
+
+msgid "Paste options"
+msgstr "貼上選項"
+
+msgid "Paste"
+msgstr "貼上"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "富文字編輯器不支援「將 HTML 貼上為 Markdown」"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "將 HTML 貼上為 Markdown 失敗：%s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "轉換失敗；已貼上純文字"
+
+msgid "Clipboard is empty"
+msgstr "剪貼簿是空的"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "已貼上純文字（找不到 HTML）"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "已貼上為 Markdown（已排除圖片）"
+
+msgid "Pasted as Markdown"
+msgstr "已貼上為 Markdown"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "已貼上為 Markdown（已轉換 %2$s 張圖片中的 %1$s 張）"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "已貼上為 Markdown（已建立 %s 個圖片資源）"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "貼上失敗：無法處理 HTML 或讀取純文字"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "貼上失敗：沒有可用的 HTML 或純文字"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "貼上失敗：無法將內容插入編輯器"

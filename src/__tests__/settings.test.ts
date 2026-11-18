@@ -27,7 +27,7 @@ describe('settings', () => {
     test('registers the settings section and all paste options', async () => {
         await registerPluginSettings();
 
-        expect(registerSection).toHaveBeenCalledWith('pasteAsMarkdown', {
+        expect(registerSection).toHaveBeenCalledWith('pasteAsMarkdownI18n', {
             label: 'Paste HTML as Markdown',
             iconName: 'fas fa-paste',
         });
@@ -41,27 +41,27 @@ describe('settings', () => {
             [SETTINGS.INCLUDE_IMAGES]: {
                 value: DEFAULT_PASTE_OPTIONS.includeImages,
                 type: SettingItemType.Bool,
-                section: 'pasteAsMarkdown',
+                section: 'pasteAsMarkdownI18n',
             },
             [SETTINGS.CONVERT_IMAGES_TO_RESOURCES]: {
                 value: DEFAULT_PASTE_OPTIONS.convertImagesToResources,
                 type: SettingItemType.Bool,
-                section: 'pasteAsMarkdown',
+                section: 'pasteAsMarkdownI18n',
             },
             [SETTINGS.NORMALIZE_QUOTES]: {
                 value: DEFAULT_PASTE_OPTIONS.normalizeQuotes,
                 type: SettingItemType.Bool,
-                section: 'pasteAsMarkdown',
+                section: 'pasteAsMarkdownI18n',
             },
             [SETTINGS.FORCE_TIGHT_LISTS]: {
                 value: DEFAULT_PASTE_OPTIONS.forceTightLists,
                 type: SettingItemType.Bool,
-                section: 'pasteAsMarkdown',
+                section: 'pasteAsMarkdownI18n',
             },
             [SETTINGS.LIST_INDENTATION]: {
                 value: DEFAULT_PASTE_OPTIONS.listIndentation,
                 type: SettingItemType.String,
-                section: 'pasteAsMarkdown',
+                section: 'pasteAsMarkdownI18n',
                 isEnum: true,
                 options: {
                     [LIST_INDENTATION.SPACES]: 'Spaces',
@@ -71,7 +71,7 @@ describe('settings', () => {
             [SETTINGS.SHOW_PASTE_OPTIONS_DIALOG]: {
                 value: false,
                 type: SettingItemType.Bool,
-                section: 'pasteAsMarkdown',
+                section: 'pasteAsMarkdownI18n',
             },
         });
     });

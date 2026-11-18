@@ -2,22 +2,27 @@ import joplin from 'api';
 import { ContentScriptType, MenuItemLocation } from 'api/types';
 import { createPasteOptionsDialog } from './dialog/pasteOptionsDialog';
 import { isMarkdownEditorContextMenuOrigin } from './editor/editorIntegration';
+import { _, initI18n } from './i18n';
 import logger from './logger';
 import { executePasteAsMarkdownCommand } from './pasteCommand';
 import { registerPluginSettings } from './settings';
 import type { PasteOptionsPrompt } from './types';
 
-const PASTE_AS_MARKDOWN_COMMAND = 'pasteHtmlAsMarkdown';
+// IDs carry an `I18n` suffix so this fork can be installed next to the original plugin without clashing.
+const PASTE_AS_MARKDOWN_COMMAND = 'pasteHtmlAsMarkdownI18n';
 const PASTE_AS_MARKDOWN_SHORTCUT = 'Ctrl+Alt+V';
-const PASTE_AS_MARKDOWN_MENU = 'pasteAsMarkdownMenu';
-const CODE_MIRROR_6_CONTENT_SCRIPT_ID = 'pasteAsMarkdownCodeMirror6';
-const CODE_MIRROR_5_CONTENT_SCRIPT_ID = 'pasteAsMarkdownCodeMirror5';
+const PASTE_AS_MARKDOWN_MENU = 'pasteAsMarkdownMenuI18n';
+const CODE_MIRROR_6_CONTENT_SCRIPT_ID = 'pasteAsMarkdownI18nCodeMirror6';
+const CODE_MIRROR_5_CONTENT_SCRIPT_ID = 'pasteAsMarkdownI18nCodeMirror5';
 
 /** Fallback when the dialog can't be created: pastes still work using the saved settings. */
 const useSavedPasteOptions: PasteOptionsPrompt = (options) => Promise.resolve(options);
 
 void joplin.plugins.register({
     onStart: async () => {
+        // Must run before any labels are registered so the UI uses Joplin's language.
+        await initI18n();
+
         // A failed registration only costs the content script's features, so keep starting up.
         try {
             await joplin.contentScripts.register(
@@ -44,7 +49,7 @@ void joplin.plugins.register({
         // Register command
         await joplin.commands.register({
             name: PASTE_AS_MARKDOWN_COMMAND,
-            label: 'Paste HTML as Markdown',
+            label: _('Paste HTML as Markdown'),
             iconName: 'fas fa-paste',
             execute: () => executePasteAsMarkdownCommand(promptForPasteOptions),
         });
@@ -74,7 +79,7 @@ void joplin.plugins.register({
             if (!exists) {
                 menu.items.push({
                     commandName: PASTE_AS_MARKDOWN_COMMAND,
-                    label: 'Paste HTML as Markdown',
+                    label: _('Paste HTML as Markdown'),
                     accelerator: PASTE_AS_MARKDOWN_SHORTCUT,
                 });
             }

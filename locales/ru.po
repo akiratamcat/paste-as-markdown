@@ -1,0 +1,107 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "Вставить HTML как Markdown"
+
+msgid "Include images"
+msgstr "Включать изображения"
+
+msgid "Convert images to Joplin resources"
+msgstr "Преобразовывать изображения в ресурсы Joplin"
+
+msgid "Normalize smart quotes"
+msgstr "Нормализовать типографские кавычки"
+
+msgid "Force tight lists"
+msgstr "Принудительно компактные списки"
+
+msgid "List indentation"
+msgstr "Отступы в списках"
+
+msgid "Spaces"
+msgstr "Пробелы"
+
+msgid "Tabs"
+msgstr "Табуляция"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "Если включено, изображения будут включены во вставляемый Markdown. Если отключено, изображения будут полностью удалены."
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "Если включено, изображения http(s) и base64 сохраняются как ресурсы Joplin (требуется «Включать изображения»)."
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Преобразует типографские кавычки Word/Office в обычные для лучшей совместимости с Markdown."
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "Не добавлять пустые строки между элементами списка в итоговом Markdown, кроме элементов списка, содержащих несколько блоков."
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "Выберите, использовать ли пробелы или табуляцию для отступов вложенных элементов списка и строк продолжения."
+
+msgid "Show paste options dialog"
+msgstr "Показывать диалог параметров вставки"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "Если включено, команда «Вставить HTML как Markdown» сначала показывает диалог, в котором можно изменить указанные выше параметры только для этой вставки. Диалог открывается с текущими настройками."
+
+msgid "Paste options"
+msgstr "Параметры вставки"
+
+msgid "Paste"
+msgstr "Вставить"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "«Вставить HTML как Markdown» не поддерживается в визуальном редакторе"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "Не удалось выполнить «Вставить HTML как Markdown»: %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "Ошибка преобразования; вставлен обычный текст"
+
+msgid "Clipboard is empty"
+msgstr "Буфер обмена пуст"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "Вставлен обычный текст (HTML не найден)"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Вставлено как Markdown (без изображений)"
+
+msgid "Pasted as Markdown"
+msgstr "Вставлено как Markdown"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Вставлено как Markdown (преобразовано %s из %s изображения)"
+msgstr[1] "Вставлено как Markdown (преобразовано %s из %s изображений)"
+msgstr[2] "Вставлено как Markdown (преобразовано %s из %s изображений)"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Вставлено как Markdown (создан %s ресурс изображения)"
+msgstr[1] "Вставлено как Markdown (создано %s ресурса изображений)"
+msgstr[2] "Вставлено как Markdown (создано %s ресурсов изображений)"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "Ошибка вставки: не удалось обработать HTML или прочитать обычный текст"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "Ошибка вставки: нет доступного HTML или обычного текста"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "Ошибка вставки: не удалось вставить содержимое в редактор"

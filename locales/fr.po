@@ -1,0 +1,105 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "Coller le HTML en Markdown"
+
+msgid "Include images"
+msgstr "Inclure les images"
+
+msgid "Convert images to Joplin resources"
+msgstr "Convertir les images en ressources Joplin"
+
+msgid "Normalize smart quotes"
+msgstr "Normaliser les guillemets typographiques"
+
+msgid "Force tight lists"
+msgstr "Forcer les listes compactes"
+
+msgid "List indentation"
+msgstr "Indentation des listes"
+
+msgid "Spaces"
+msgstr "Espaces"
+
+msgid "Tabs"
+msgstr "Tabulations"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "Si activé, les images sont incluses dans le Markdown collé. Si désactivé, les images sont entièrement supprimées."
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "Si activé, les images http(s) et base64 sont enregistrées comme ressources Joplin (nécessite « Inclure les images »)."
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Convertit les guillemets typographiques de Word/Office en guillemets droits pour une meilleure compatibilité Markdown."
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "Empêche les lignes vides entre les éléments de liste dans le Markdown produit, sauf pour les éléments contenant plusieurs blocs."
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "Choisissez si les éléments de liste imbriqués et les lignes de continuation sont indentés avec des espaces ou des tabulations."
+
+msgid "Show paste options dialog"
+msgstr "Afficher la boîte de dialogue des options de collage"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "Si activé, « Coller le HTML en Markdown » affiche d'abord une boîte de dialogue permettant d'ajuster les options ci-dessus pour ce collage uniquement. La boîte de dialogue reprend ces paramètres comme valeurs initiales."
+
+msgid "Paste options"
+msgstr "Options de collage"
+
+msgid "Paste"
+msgstr "Coller"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "« Coller le HTML en Markdown » n'est pas pris en charge dans l'éditeur de texte enrichi"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "Échec de « Coller le HTML en Markdown » : %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "Échec de la conversion ; texte brut collé"
+
+msgid "Clipboard is empty"
+msgstr "Le presse-papiers est vide"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "Texte brut collé (aucun HTML trouvé)"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Collé en Markdown (images exclues)"
+
+msgid "Pasted as Markdown"
+msgstr "Collé en Markdown"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Collé en Markdown (images converties : %s sur %s)"
+msgstr[1] "Collé en Markdown (images converties : %s sur %s)"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Collé en Markdown (%s ressource image créée)"
+msgstr[1] "Collé en Markdown (%s ressources images créées)"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "Échec du collage : impossible de traiter le HTML ou de lire le texte brut"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "Échec du collage : aucun HTML ni texte brut disponible"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "Échec du collage : impossible d'insérer le contenu dans l'éditeur"

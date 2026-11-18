@@ -1,0 +1,105 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "Incolla HTML come Markdown"
+
+msgid "Include images"
+msgstr "Includi immagini"
+
+msgid "Convert images to Joplin resources"
+msgstr "Converti le immagini in risorse Joplin"
+
+msgid "Normalize smart quotes"
+msgstr "Normalizza le virgolette tipografiche"
+
+msgid "Force tight lists"
+msgstr "Forza elenchi compatti"
+
+msgid "List indentation"
+msgstr "Rientro degli elenchi"
+
+msgid "Spaces"
+msgstr "Spazi"
+
+msgid "Tabs"
+msgstr "Tabulazioni"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "Se attivato, le immagini vengono incluse nel Markdown incollato. Se disattivato, le immagini vengono rimosse completamente."
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "Se attivato, le immagini http(s) e base64 vengono salvate come risorse Joplin (richiede «Includi immagini»)."
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Converte le virgolette tipografiche di Word/Office in virgolette semplici per una migliore compatibilità con Markdown."
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "Evita righe vuote tra gli elementi degli elenchi nel Markdown generato, tranne che per gli elementi con contenuto su più blocchi."
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "Scegli se rientrare gli elementi di elenco nidificati e le righe di continuazione con spazi o tabulazioni."
+
+msgid "Show paste options dialog"
+msgstr "Mostra la finestra delle opzioni di incolla"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "Se attivato, «Incolla HTML come Markdown» mostra prima una finestra per regolare le opzioni sopra solo per quell'operazione. La finestra parte da queste impostazioni."
+
+msgid "Paste options"
+msgstr "Opzioni di incolla"
+
+msgid "Paste"
+msgstr "Incolla"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "«Incolla HTML come Markdown» non è supportato nell'editor di testo formattato"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "«Incolla HTML come Markdown» non riuscito: %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "Conversione non riuscita; incollato testo semplice"
+
+msgid "Clipboard is empty"
+msgstr "Gli appunti sono vuoti"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "Incollato testo semplice (nessun HTML trovato)"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Incollato come Markdown (immagini escluse)"
+
+msgid "Pasted as Markdown"
+msgstr "Incollato come Markdown"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Incollato come Markdown (immagini convertite: %s su %s)"
+msgstr[1] "Incollato come Markdown (immagini convertite: %s su %s)"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Incollato come Markdown (%s risorsa immagine creata)"
+msgstr[1] "Incollato come Markdown (%s risorse immagine create)"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "Incolla non riuscito: impossibile elaborare l'HTML o leggere il testo semplice"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "Incolla non riuscito: nessun HTML o testo semplice disponibile"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "Incolla non riuscito: impossibile inserire il contenuto nell'editor"

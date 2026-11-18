@@ -1,6 +1,7 @@
 import joplin from 'api';
+import { _ } from '../i18n';
 import logger from '../logger';
-import { LIST_INDENTATION_LABELS, PASTE_OPTION_LABELS, SETTINGS } from '../settings';
+import { getListIndentationLabels, getPasteOptionLabels, SETTINGS } from '../settings';
 import { LIST_INDENTATION, type ListIndentation, type PasteOptions, type PasteOptionsPrompt } from '../types';
 
 const DIALOG_ID = 'pasteOptionsDialog';
@@ -28,7 +29,7 @@ const OPTION_DEPENDENCIES: Partial<Record<BooleanOption, BooleanOption>> = {
     [SETTINGS.CONVERT_IMAGES_TO_RESOURCES]: SETTINGS.INCLUDE_IMAGES,
 };
 
-function renderCheckbox(name: BooleanOption, options: PasteOptions): string {
+function renderCheckbox(name: BooleanOption, options: PasteOptions, label: string): string {
     const requires = OPTION_DEPENDENCIES[name];
     const attributes = [
         `type="checkbox"`,
@@ -38,31 +39,35 @@ function renderCheckbox(name: BooleanOption, options: PasteOptions): string {
         requires && !options[requires] ? 'disabled' : '',
     ].filter(Boolean);
     const optionClass = requires ? 'option option-dependent' : 'option';
-    return `<label class="${optionClass}"><input ${attributes.join(' ')}> ${PASTE_OPTION_LABELS[name]}</label>`;
+    return `<label class="${optionClass}"><input ${attributes.join(' ')}> ${label}</label>`;
 }
 
-function renderListIndentationSelect(options: PasteOptions): string {
-    const choices = Object.entries(LIST_INDENTATION_LABELS)
-        .map(([value, label]) => {
+function renderListIndentationSelect(options: PasteOptions, label: string): string {
+    const choices = Object.entries(getListIndentationLabels())
+        .map(([value, choiceLabel]) => {
             const selected = value === options.listIndentation ? ' selected' : '';
-            return `<option value="${value}"${selected}>${label}</option>`;
+            return `<option value="${value}"${selected}>${choiceLabel}</option>`;
         })
         .join('');
     return (
-        `<label class="option option-select">${PASTE_OPTION_LABELS.listIndentation} ` +
+        `<label class="option option-select">${label} ` +
         `<select name="${SETTINGS.LIST_INDENTATION}">${choices}</select></label>`
     );
 }
 
-/** Builds the dialog form, pre-filled from the given options. All interpolated values are static constants. */
+/**
+ * Builds the dialog form, pre-filled from the given options. All interpolated values are static
+ * constants or translations bundled with the plugin.
+ */
 export function buildPasteOptionsDialogHtml(options: PasteOptions): string {
-    const checkboxes = BOOLEAN_OPTIONS.map((name) => renderCheckbox(name, options)).join('');
+    const labels = getPasteOptionLabels();
+    const checkboxes = BOOLEAN_OPTIONS.map((name) => renderCheckbox(name, options, labels[name])).join('');
     return (
         // tabindex lets the webview script focus the form, so key events reach the dialog when it opens.
         `<form name="${FORM_NAME}" class="paste-options" tabindex="-1">` +
-        `<h3>Paste options</h3>` +
+        `<h3>${_('Paste options')}</h3>` +
         checkboxes +
-        renderListIndentationSelect(options) +
+        renderListIndentationSelect(options, labels.listIndentation) +
         `</form>`
     );
 }
@@ -103,8 +108,8 @@ export async function createPasteOptionsDialog(): Promise<PasteOptionsPrompt> {
     const dialogs = joplin.views.dialogs;
     const handle = await dialogs.create(DIALOG_ID);
     await dialogs.setButtons(handle, [
-        { id: BUTTON_IDS.PASTE, title: 'Paste' },
-        { id: BUTTON_IDS.CANCEL, title: 'Cancel' },
+        { id: BUTTON_IDS.PASTE, title: _('Paste') },
+        { id: BUTTON_IDS.CANCEL, title: _('Cancel') },
     ]);
     await dialogs.addScript(handle, DIALOG_STYLESHEET);
     await dialogs.addScript(handle, DIALOG_SCRIPT);

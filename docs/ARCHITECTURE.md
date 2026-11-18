@@ -20,7 +20,7 @@ This plugin turns clipboard HTML into clean Markdown for Joplin. It favors predi
 
 ### Entry Point
 
-- `src/index.ts` registers the Joplin command, menus, separate CodeMirror 5 and CodeMirror 6 content scripts, and the paste options dialog, and delegates settings setup to `src/settings.ts`. The dialog's prompt is passed explicitly through the command into the paste handler; if dialog creation fails, a prompt that keeps the saved options is used instead.
+- `src/index.ts` first loads the UI translation (`initI18n`), then registers the Joplin command, menus, separate CodeMirror 5 and CodeMirror 6 content scripts, and the paste options dialog, and delegates settings setup to `src/settings.ts`. The dialog's prompt is passed explicitly through the command into the paste handler; if dialog creation fails, a prompt that keeps the saved options is used instead.
 - `src/pasteCommand.ts` is the command boundary. It stops before reading or converting clipboard data when `editor.codeView` indicates the unsupported rich text editor.
 
 ### Editor Integration
@@ -28,6 +28,17 @@ This plugin turns clipboard HTML into clean Markdown for Joplin. It favors predi
 - `src/editor/editorCommands.ts` holds the command names shared between the plugin and its content scripts.
 - `src/editor/contentScripts/codeMirror6.ts` and `src/editor/contentScripts/codeMirror5.ts` register those commands in the CodeMirror 6 and legacy editors respectively; each ignores the other's editor. They expose a shared insertion command and track recent editor `contextmenu` events via `src/editor/contentScripts/contextMenuOrigin.ts`, a single-use marker with a short grace period.
 - `src/editor/editorIntegration.ts` is the plugin-side wrapper for those commands. Insertion falls back to Joplin's `insertText` when the content script is unavailable. The context-menu filter first checks Joplin's `editor.codeView` setting to exclude rich text mode, then consumes the marker to distinguish the Markdown editor from its viewer.
+
+### UI Translation (i18n)
+
+- UI text is translated with gettext PO files in `locales/` (`messages.pot` is the template; one `<language>.po` per supported language). English source text is the `msgid`, so English needs no file.
+- `src/i18n/index.ts` exposes `_()` and `_n()` (plural). Placeholders are `%s` or positional `%2$s`. `initI18n` reads Joplin's global `locale` setting once at startup (Joplin restarts on language change); unsupported locales and failures fall back to English.
+- `src/i18n/languages.ts` maps Joplin locales to a PO file (full locale, alias such as `zh_HK` → `zh_TW`, then language only) and holds per-language plural rules as code; the PO `Plural-Forms` expression is never evaluated.
+- `src/i18n/poParser.ts` parses PO text; fuzzy, untranslated, and `msgctxt` entries are skipped so lookups fall back to English.
+- PO files are bundled as text: `plugin.config.json` sets the esbuild `.po` text loader and `vitest.config.mts` mirrors it. `src/i18n/catalogs.ts` imports them; only the active language is parsed.
+- Translatable text must be passed to `_()`/`_n()` as string literals at the call site. Labels shared across modules are returned from functions (e.g. `getPasteOptionLabels()`) so they are translated when called, not at module load. `src/__tests__/i18n.test.ts` checks that the template matches the source calls and that every PO file is complete with matching placeholders and plural counts.
+- Logs, thrown error messages, and `warnings` stay in English.
+- This fork's IDs (manifest id, command, menu, content scripts, editor commands, settings section) carry an `i18n`/`I18n` suffix so it can be installed next to the original plugin.
 
 ### Settings
 

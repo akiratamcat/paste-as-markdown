@@ -1,0 +1,103 @@
+# Translations for joplin-plugin-paste-as-markdown-i18n.
+# This file is distributed under the same license as the plugin (MIT).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-paste-as-markdown-i18n\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Paste HTML as Markdown"
+msgstr "HTML を Markdown として貼り付け"
+
+msgid "Include images"
+msgstr "画像を含める"
+
+msgid "Convert images to Joplin resources"
+msgstr "画像を Joplin のリソースに変換"
+
+msgid "Normalize smart quotes"
+msgstr "スマートクォートを正規化"
+
+msgid "Force tight lists"
+msgstr "リストを詰めて出力"
+
+msgid "List indentation"
+msgstr "リストのインデント"
+
+msgid "Spaces"
+msgstr "スペース"
+
+msgid "Tabs"
+msgstr "タブ"
+
+msgid "If enabled, images will be included in the pasted markdown. If disabled, images will be removed entirely."
+msgstr "有効にすると、貼り付ける Markdown に画像を含めます。無効にすると、画像はすべて削除されます。"
+
+msgid "If enabled, http(s) and base64 images are stored as Joplin resources (requires 'Include images')."
+msgstr "有効にすると、http(s) 画像と base64 画像を Joplin のリソースとして保存します（「画像を含める」が必要です）。"
+
+msgid "Convert Word/Office smart quotes to regular quotes for better markdown compatibility."
+msgstr "Word/Office のスマートクォート（曲がった引用符）を通常の引用符に変換し、Markdown との互換性を高めます。"
+
+msgid "Prevent blank lines between list items in output Markdown, except for list items with multi-block content."
+msgstr "出力する Markdown で、リスト項目の間に空行を入れないようにします（複数のブロックを含むリスト項目を除く）。"
+
+msgid "Choose whether nested list items and continuation lines are indented with spaces or tabs."
+msgstr "入れ子のリスト項目と継続行のインデントに、スペースとタブのどちらを使うかを選びます。"
+
+msgid "Show paste options dialog"
+msgstr "貼り付けオプションのダイアログを表示"
+
+msgid "If enabled, Paste HTML as Markdown first shows a dialog for adjusting the options above for that paste only. The dialog starts from these settings."
+msgstr "有効にすると、「HTML を Markdown として貼り付け」の実行時に、上記のオプションをその貼り付けに限って調整するダイアログを先に表示します。ダイアログの初期値はこの設定です。"
+
+msgid "Paste options"
+msgstr "貼り付けオプション"
+
+msgid "Paste"
+msgstr "貼り付け"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Paste HTML as Markdown is not supported in the rich text editor"
+msgstr "リッチテキストエディターでは「HTML を Markdown として貼り付け」を使用できません"
+
+msgid "Paste HTML as Markdown failed: %s"
+msgstr "HTML を Markdown として貼り付けできませんでした: %s"
+
+msgid "Conversion failed; pasted plain text"
+msgstr "変換に失敗したため、プレーンテキストとして貼り付けました"
+
+msgid "Clipboard is empty"
+msgstr "クリップボードが空です"
+
+msgid "Pasted plain text (no HTML found)"
+msgstr "プレーンテキストとして貼り付けました（HTML がありません）"
+
+msgid "Pasted as Markdown (images excluded)"
+msgstr "Markdown として貼り付けました（画像は除外）"
+
+msgid "Pasted as Markdown"
+msgstr "Markdown として貼り付けました"
+
+msgid "Pasted as Markdown (converted %s of %s image)"
+msgid_plural "Pasted as Markdown (converted %s of %s images)"
+msgstr[0] "Markdown として貼り付けました（画像 %2$s 件中 %1$s 件を変換）"
+
+msgid "Pasted as Markdown (%s image resource created)"
+msgid_plural "Pasted as Markdown (%s image resources created)"
+msgstr[0] "Markdown として貼り付けました（画像リソースを %s 件作成）"
+
+msgid "Paste failed: unable to process HTML or read plain text"
+msgstr "貼り付けに失敗しました: HTML を処理できず、プレーンテキストも読み取れませんでした"
+
+msgid "Paste failed: no HTML or plain text available"
+msgstr "貼り付けに失敗しました: HTML もプレーンテキストもありません"
+
+msgid "Paste failed: unable to insert content into editor"
+msgstr "貼り付けに失敗しました: エディターに内容を挿入できませんでした"
