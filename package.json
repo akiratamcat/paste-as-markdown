@@ -1,5 +1,5 @@
 {
-    "name": "joplin-plugin-paste-as-markdown",
+    "name": "joplin-plugin-paste-as-markdown-i18n",
     "version": "1.6.1",
     "scripts": {
         "dist": "npm run typecheck && joplin-plugin-scripts build",

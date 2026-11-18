@@ -1,4 +1,10 @@
-# Paste HTML as Markdown
+# Paste HTML as Markdown i18n
+
+> **Personal test fork with UI translations.** This is a fork of [bwat47/paste-as-markdown](https://github.com/bwat47/paste-as-markdown) by bwat47 that adds gettext (PO) based UI translations. The UI language follows Joplin's language setting. Supported: Japanese, Simplified Chinese, Traditional Chinese, Korean, German, French, Spanish, Italian, Brazilian Portuguese, and Russian (other languages use English). It uses its own plugin ID (`com.bwat47.paste-as-markdown-i18n`) and is not affiliated with or published by the original author.
+>
+> **UI 翻訳付きの個人テスト版です。** bwat47 氏による [bwat47/paste-as-markdown](https://github.com/bwat47/paste-as-markdown) のフォークで、gettext（PO）による UI 翻訳を追加しています。UI の言語は Joplin の言語設定に従います。対応言語は日本語、簡体字中国語、繁体字中国語、韓国語、ドイツ語、フランス語、スペイン語、イタリア語、ブラジルポルトガル語、ロシア語です（その他の言語では英語）。独自のプラグイン ID（`com.bwat47.paste-as-markdown-i18n`）を使用しており、原作者による公式版ではありません。
+>
+> Translations live in [`locales/`](locales/). To add a language, copy `locales/messages.pot` to `locales/<language>.po`, translate it, and register it in `src/i18n/languages.ts` and `src/i18n/catalogs.ts`.
 
 Paste content from websites, email, Office, Google Docs, and spreadsheets into Joplin as clean, editable Markdown. The plugin sanitizes copied HTML, removes webpage clutter, and repairs common problems with lists, tables, code blocks, links, and images before conversion.
 
